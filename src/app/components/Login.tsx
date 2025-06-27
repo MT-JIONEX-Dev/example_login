@@ -11,13 +11,12 @@ export default function Login() {
         <div className="d-none d-lg-flex col-lg-6 flex-column justify-content-between p-0 position-relative">
           <div className="flex-grow-1 d-flex align-items-center justify-content-center">
             <Image
-              src="/login-illustration.png"
+              src="/login-illustration.svg"
               alt="Login Illustration"
               width={840}
               height={1024}
               className="mx-auto img-fluid"
               priority
-              style={{ maxWidth: '100%', maxHeight: '100vh' }}
             />
           </div>
         </div>

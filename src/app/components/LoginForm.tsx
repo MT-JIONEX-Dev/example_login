@@ -73,7 +73,7 @@ export default function LoginForm() {
         className="btn btn-primary btn-lg w-100 mt-2 mb-3 shadow-sm"
         disabled={loading}
         aria-disabled={loading}
-        style={{ transition: 'box-shadow 0.2s, background 0.2s' }}
+        style={{ transition: 'box-shadow 0.2s, background 0.2s', backgroundColor: "#025EE1 !important"}}
       >
         {loading ? 'Logging in...' : 'Login'}
       </button>
