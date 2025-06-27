@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Example Login Page
+
+A modern, responsive login page built with Next.js, TypeScript, and Bootstrap. This project demonstrates best practices for authentication UI, validation, accessibility, and responsive design. 
+
+## Features
+- Pixel-perfect login UI matching Figma design
+- Responsive layout for desktop, tablet, and mobile
+- Floating label inputs with custom validation and accessibility
+- Password visibility toggle
+- Error messages for invalid or empty fields
+- Mock authentication flow (easy to extend for real API)
+- Forgot password placeholder page
+- Clean, modular code structure
+- Bootstrap 5 for styling
+- TypeScript throughout
+- ESLint and strict type checking
+
+## Tech Stack
+- [Next.js](https://nextjs.org/) (App Router)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [ESLint](https://eslint.org/)
+
+## Folder Structure
+```
+example-login/
+├── public/                # Static assets (logo, illustration)
+├── src/
+│   └── app/
+│       ├── components/    # Login UI components
+│       ├── context/       # Auth context provider
+│       ├── validations/   # Validation logic
+│       ├── home/          # Authenticated landing page
+│       ├── forgot-password/ # Password recovery page
+│       ├── globals.css    # Custom global styles
+│       └── layout.tsx     # App layout
+├── package.json
+├── tsconfig.json
+├── eslint.config.mjs
+└── README.md
+```
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Lint your code:**
+   ```bash
+   npm run lint
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment (Vercel)
+- Push your code to GitHub.
+- Go to [vercel.com](https://vercel.com/) and import your repository.
+- Vercel will auto-detect Next.js and deploy your app.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Customization & Extending
+- To use real authentication, update `src/app/context/AuthContext.tsx` to call your API and handle tokens securely (use environment variables for secrets).
+- Add more pages or features as needed. The structure is ready for scaling.
 
-## Learn More
+## Best Practices Followed
+- Type safety and strict mode
+- Modular, reusable components
+- Separation of concerns (UI, logic, context)
+- Accessibility (labels, ARIA, keyboard navigation)
+- Responsive and mobile-first design
+- No hardcoded secrets or credentials
+- Linting and formatting enforced
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT

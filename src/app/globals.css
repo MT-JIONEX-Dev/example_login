@@ -1,42 +1,92 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
 :root {
-  --background: #ffffff;
+  --background: #f1f1f8;
   --foreground: #171717;
+  --primary: #025EE1;
+  --dark-blue: #171C8F;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #025EE1;
+    --dark-blue: #171C8F;
   }
 }
 
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--foreground);
+  font-family: Calibri, Arial, Helvetica, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
+.placeholder-blue::placeholder {
+  color: #025ee1 !important;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.eye-icon-btn {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
   padding: 0;
   margin: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.eye-icon-btn:focus {
+  outline: 2px solid #025ee1;
+  outline-offset: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Floating label blue color and bold */
+.floating-blue:focus ~ label,
+.floating-blue:not(:placeholder-shown) ~ label,
+.form-floating > .floating-blue:focus ~ label,
+.form-floating > .floating-blue:not(:placeholder-shown) ~ label {
+  color: #025ee1 !important;
+  font-weight: 600;
+}
+
+.floating-blue:focus {
+  border-color: #025ee1 !important;
+  box-shadow: 0 0 0 2px #025ee133;
+}
+
+.form-floating > .floating-blue {
+  border-radius: 24px;
+  border-width: 3px;
+  font-size: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.form-floating > label {
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  color: #b0b7c3;
+  font-weight: 600;
+}
+
+.eye-icon-btn svg {
+  opacity: 0.5;
+}
+
+.eye-icon-btn:focus svg {
+  opacity: 1;
+}
+
+.input-normal {
+  font-size: 1.1rem !important;
+  height: 48px;
 }
