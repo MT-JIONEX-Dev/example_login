@@ -3,6 +3,7 @@
 import { useAuth } from '../context/AuthContext';
 import { useState } from 'react';
 import { validateLoginFields } from '../validations/loginValidations';
+import Link from 'next/link';
 
 function EyeIcon({ open }: { open: boolean }) {
   return open ? (
@@ -85,9 +86,9 @@ export default function LoginForm() {
         {loading ? 'Logging in...' : 'Login'}
       </button>
       <div className="text-center">
-        <a href="/forgot-password" className="text-primary text-decoration-none" tabIndex={0}>
+        <Link href="/forgot-password" className="text-primary text-decoration-none" tabIndex={0}>
           Forgot password
-        </a>
+        </Link>
       </div>
     </form>
   );
