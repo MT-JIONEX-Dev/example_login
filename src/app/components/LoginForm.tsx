@@ -5,14 +5,6 @@ import { useState } from 'react';
 import { validateLoginFields } from '../validations/loginValidations';
 import Link from 'next/link';
 
-function EyeIcon({ open }: { open: boolean }) {
-  return open ? (
-    <svg aria-hidden="true" width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff" stroke="#025ee1" strokeWidth="2"/><path stroke="#025ee1" strokeWidth="2" d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12Z"/><circle cx="12" cy="12" r="3" stroke="#025ee1" strokeWidth="2"/></svg>
-  ) : (
-    <svg aria-hidden="true" width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff" stroke="#025ee1" strokeWidth="2"/><path stroke="#025ee1" strokeWidth="2" d="M1 12s4-7 11-7c2.5 0 4.7.7 6.5 1.8M23 12s-4 7-11 7c-2.5 0-4.7-.7-6.5-1.8"/><circle cx="12" cy="12" r="3" stroke="#025ee1" strokeWidth="2"/><path stroke="#025ee1" strokeWidth="2" d="M3 3l18 18"/></svg>
-  );
-}
-
 export default function LoginForm() {
   const { login } = useAuth();
   const [username, setUsername] = useState('');
@@ -72,7 +64,7 @@ export default function LoginForm() {
           tabIndex={0}
           style={{ top: '50%', right: '18px', transform: 'translateY(-50%)', position: 'absolute', background: 'none', border: 'none', padding: 0, margin: 0, zIndex: 2, display: 'flex', alignItems: 'center', cursor: 'pointer', height: '32px', width: '32px' }}
         >
-          <EyeIcon open={showPassword} />
+          <img src={showPassword ? '/hide.png' : '/show.png'} alt={showPassword ? 'Hide password' : 'Show password'} style={{ width: 28, height: 28, opacity: 0.5 }} />
         </button>
       </div>
       {error && <div className="alert alert-danger py-2" role="alert">{error}</div>}
@@ -86,7 +78,7 @@ export default function LoginForm() {
         {loading ? 'Logging in...' : 'Login'}
       </button>
       <div className="text-center">
-        <Link href="/forgot-password" className="text-primary text-decoration-none" tabIndex={0}>
+        <Link href="/forgot-password" className="text-decoration-none" tabIndex={0} style={{ color: '#332A7C' }}>
           Forgot password
         </Link>
       </div>

@@ -65,7 +65,7 @@ body {
 }
 
 .form-floating > .floating-blue {
-  border-radius: 24px;
+  border-radius: 10px;
   border-width: 3px;
   font-size: 1.5rem;
   padding-left: 1.5rem;
@@ -76,14 +76,6 @@ body {
   font-size: 1.1rem;
   color: #b0b7c3;
   font-weight: 600;
-}
-
-.eye-icon-btn svg {
-  opacity: 0.5;
-}
-
-.eye-icon-btn:focus svg {
-  opacity: 1;
 }
 
 .input-normal {
